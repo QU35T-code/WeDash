@@ -1,0 +1,18 @@
+{% block content %}
+{% load widget_tweaks %}
+<div class="dehash__container">
+    <div class="block_up">
+        <h1 class="wtitle">Cryptocurrencies</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {% render_field crypto.form.crypto_choice class="body-form-subject" %}
+            </div>
+            <div class="wresult">
+                <p><u><b>Symbol :</b></u> {{ crypto.symbol }}</p></br>
+                <p><u><b>Name :</b></u> {{ crypto.name }}</p></br>
+                <p><u><b>USD :</b></u> {{ crypto.price }}$</p></br>
+            </div>
+            <input class="main-button" type="submit" value="Search">
+        </form>
+</div>
+{% endblock content %}

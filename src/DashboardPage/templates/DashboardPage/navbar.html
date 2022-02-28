@@ -1,0 +1,36 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'DashboardPage/css/navbar.css' %}">
+{% block navbar %}
+<div class="body-containt">
+    <div class="body-bar-horizontal">
+            <div class="content-logo">
+                <a href="/">
+                <img class="logo-img"
+                    src="{% static 'DashboardPage/img/logo.png'%}"
+                    alt="Logo of WeDash" /></a>
+            </div>
+    </div>
+    <div class="body-button-block">
+        <div class="body-button-container">
+            <a href="/dashboard/">
+                <img src="{% static 'DashboardPage/img/dash_nav.png'%}">
+            </a>
+        </div>
+        <div class="body-button-container">
+            <a href="/dashboard/profile">
+                <img src="{% static 'DashboardPage/img/profile_nav.png'%}">
+            </a>
+        </div>
+        <div class="body-button-container">
+            <a href="/dashboard/shop/">
+                <img src="{% static 'DashboardPage/img/shop_nav.png'%}">
+            </a>
+        </div>
+        <div class="body-button-container">
+            <a href="/dashboard/settings/">
+                <img src="{% static 'DashboardPage/img/settings_nav.png'%}">
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock navbar %}

@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'DashboardPage/css/settings.css' %}">
+    <title>Settings</title>
+</head>
+<body>
+    <header>
+        {% include 'DashboardPage/navbar.html' %}
+    </header>
+    <div class="body-title-container">
+        <h1>Settings</h1>
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="body-container">
+            <div class="left-container">
+                <div class="body-alert-container">
+                    <h2>Alert</h2><br/>
+                        <div class="mail-alert-containt">
+                            <label class="switch">
+                                {{ settings.mail }}
+                                <span class="slider round"></span>
+                            </label>
+                            <h3>Mail</h3>
+                        </div>
+                        <div class="sms-alert-containt">
+                            <label class="switch">
+                                {{ settings.sms }}
+                                <span class="slider round"></span>
+                            </label>
+                            <h3>Sms</h3>
+                        </div>
+                        <div class="sound-alert-containt">
+                            <label class="switch">
+                                {{ settings.sound }}
+                                <span class="slider round"></span>
+                            </label>
+                            <h3>Sound</h3>
+                        </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="body-appearance-container">
+                    <h2>Appearance</h2><br/>
+                    <div class="appearance-container">
+                        <div class="appearance-container-left">
+                            <div class="chrismas_mode-appearance-containt">
+                                <br/><label class="switch">
+                                    {{ settings.cmode }}
+                                    <span class="slider round"></span>
+                                </label>
+                                <h3>ChrismasMode</h3>
+                            </div>
+                            <div class="dark_mode-appearance-containt">
+                                <label class="switch">
+                                    {{ settings.dmode }}
+                                    <span class="slider round"></span>
+                                </label>
+                                <h3>DarkMode</h3>
+                            </div>
+                        </div>
+                        <div class="appearance-container-right">
+                            <div class="language-appearance-containt">
+                                <h3>Language</h3>
+                                <select name="language" id="language-select">
+                                    <option value="English">English</option>
+                                    <option value="Français">Français</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                <div class="body-security-container">
+                    <h2>Security</h2><br/>
+                    <div class="security-container">
+                        <div class="password-security-containt">
+                            <a class="button" href="#">Change password</a>
+                        </div>
+                        <div class="delete_account-security-containt">
+                            <a class="button" href="/dashboard/settings/delete/{{userID}}">Delete your account</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-other-container">
+                    <h2>Other</h2><br/>
+                    <div class="other-container">
+                        <div class="logout-containt">
+                            <a class="button" href="/accounts/logout">Logout</a>
+                        </div>
+                        <input class="main-button" type="submit" value="Save Settings" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% block content %}
+{% load widget_tweaks %}
+<div class="dehash__container">
+    <div class="block_up">
+        <h1 class="wtitle">Horoscope</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {% render_field horoscope.form.horoscope_choice class="body-form-subject" %}
+            </div>
+            <div class="wresult">
+                <p><u><b>Date :</b></u> {{horoscope.date_range}}</p>
+                <p><u><b>Description :</b></u> {{ horoscope.description }}</p>
+                <p><u><b>Mood :</b></u> {{ horoscope.mood }}</p>
+            </div>
+            <input class="main-button" type="submit" value="Search">
+        </form>
+</div>
+{% endblock content %}

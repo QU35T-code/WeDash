@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeDash</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Mada&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar-container">
+            <a href="/"><h1 class="navbar-logo">Wedash</h1></a>
+            <div class="navbar-items">
+                <a href="/product"><h2>Product</h2></a>
+                <a href="/widgets"><h2 style="margin-left: 50px;">Widgets</h2></a>
+                <a href="/contact"><h2 style="margin-left: 50px;">Contact</h2></a>
+            </div>
+            <div class="navbar-items">
+                <a href="/accounts/login"><h2>Sign In</h2></a>
+                <a href="/accounts/register"><div class="free-trial-button">
+                    <h2 style="color: #F9F9FB;">Free Trial</h2>
+                </div></a>
+            </div>
+        </div>
+        <div class="main-section-center">
+            <div class="main-container">
+                <h1 class="main-slogan">Make</br><b>your organization</b></br>as you wish</h1>
+                <p>Chosen by many companies, Wedash offers the </br>possibility to follow your different tasks in real </br>time.</p>
+                <a href="/accounts/login"><div class="main-button">
+                    <h2 style="color: #F9F9FB;">Get Started Free</h2>
+                </div></a>
+            </div>
+            <div class="main-container">
+                <!-- FIRST WIDGETS SECTION -->
+                <div class="main-widget-block-flex">
+                    <div class="main-widget-block">
+                        <div class="main-widget-container">
+                            <img style="margin-top: 20px;" src="{% static 'img/check.png' %}">
+                            <div class="main-widget-content">
+                                <h2>245<span style="font-size: 25px;">d</span></h2>
+                                <p style="font-size: 20px; margin-top: 0px;">Available</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-widget-block">
+                        <div class="main-widget-container">
+                            <img style="margin-top: 20px;" src="{% static 'img/contract.png' %}">
+                            <div class="main-widget-content">
+                                <h2>7<span style="font-size: 25px;">d</span></h2>
+                                <p style="font-size: 20px; margin-top: 0px;">Without pay</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SECOND WIDGETS SECTION -->
+                </br></br>
+                <div class="main-widget-block-flex">
+                    <div class="main-widget-block">
+                        <div class="main-widget-container">
+                            <img style="margin-top: 20px;" src="{% static 'img/work.png' %}">
+                            <div class="main-widget-content">
+                                <h2>133<span style="font-size: 25px;">d</span></h2>
+                                <p style="font-size: 20px; margin-top: 0px;">Before work</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-widget-block">
+                        <div class="main-widget-container">
+                            <img style="margin-top: 20px;" src="{% static 'img/presentation.png' %}">
+                            <div class="main-widget-content">
+                                <h2>90<span style="font-size: 25px;">d</span></h2>
+                                <p style="font-size: 20px; margin-top: 0px;">Reviews</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </br></br>
+                <!-- THIRD WIDGETS SECTION -->
+                <div class="main-widget-block-flex">
+                    <div class="main-widget-block">
+                        <div class="main-widget-container">
+                            <img style="margin-top: 20px;" src="{% static 'img/hospital.png' %}">
+                            <div class="main-widget-content">
+                                <h2>3<span style="font-size: 25px;">d</span></h2>
+                                <p style="font-size: 20px; margin-top: 0px;">Sick leave</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-widget-block">
+                        <div class="main-widget-container">
+                            <img style="margin-top: 20px;" src="{% static 'img/calendar.png' %}">
+                            <div class="main-widget-content">
+                                <h2>13,5<span style="font-size: 25px;">d</span></h2>
+                                <p style="font-size: 20px; margin-top: 0px;">Annual leave</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

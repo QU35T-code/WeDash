@@ -1,0 +1,16 @@
+{% block content %}
+<div class="dehash__container">
+    <div class="block_up">
+        <h1 class="wtitle">Dehash</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input style="width: 390px;" id="hash" type="text" placeholder="Hash :" name="hash" maxlength="100">
+        </div>
+        <div class="wresult">
+            <p><u><b>Result :</b></u> {{dehash.dehash}}</p>
+        </div>
+            
+            <input class="main-button" type="submit" value="Crack">
+        </form>
+</div>
+{% endblock content %}

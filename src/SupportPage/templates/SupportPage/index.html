@@ -1,0 +1,43 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'SupportPage/css/support.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <title>WeDash</title>
+</head>
+<body>
+    {% if infos %}
+        <div class="info-banner">
+            <h1 style="color: black;" class="message-info">{{ infos }}</h1>
+        </div>
+    {% endif %}
+    <div class="body-container">
+        <div class="body-content">
+            <h1>Support</h1></br></br>
+            <p>Fill up the form and our Team will get back to you </br>within 24 hours.</p>
+            <img style="margin-top: 20px;" src="{% static 'SupportPage/img/support.png' %}">
+        </div>
+        <div class="body-form-block">
+            <div class="body-form-container">
+                <form method="post">
+                    <h2>Subject</h2>
+                    {% csrf_token %}
+                    {% render_field form.subject class="body-form-subject" %}</br></br></br></br>
+                    <h2>Message</h2>
+                    {% render_field form.message class="body-form-message" %}</br></br></br></br>
+                    {{ form.email }}
+                    <div class="form-actions">
+                        <input class="main-button" type="submit" style="color: #F9F9FB;" value="Send Report">
+                    <!-- <button type="submit">Send</button> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

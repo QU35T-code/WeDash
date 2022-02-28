@@ -1,0 +1,65 @@
+.dehash__container {
+    background-color: #FFFFFF;
+    width: 500px;
+    height: 334px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 45px;
+    overflow: auto;
+    justify-content: space-between;
+    border: 3px solid;
+    border-radius: 20px;
+    border-color: #1934AE;
+}
+
+h1 {
+    font-family: 'Mada', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #1934AE;
+}
+
+.body-form-subject {
+    border-radius: 7px;
+    border: solid 2px #47A4DB;
+    background-color: #47A4DB;
+    width: 200px;
+    height: 55px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: 'Mada', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+
+.body-form-subject-custom {
+    border-radius: 7px;
+    border: solid 2px #47A4DB;
+    background-color: #47A4DB;
+    width: 162px;
+    height: 36px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: 'Mada', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+
+.block_up {
+    display: flex;
+    flex-direction: column;
+}
+
+.wresult {
+    margin-top: 20px;
+    font-family: 'Mada', sans-serif;
+    font-size: 20px;
+    width: 70%;
+    text-align: center;
+    color: #47A4DB;
+}

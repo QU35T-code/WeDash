@@ -1,0 +1,19 @@
+{% block content %}
+<div class="dehash__container">
+    <div class="block_up">
+        <h1 class="wtitle">Shortener</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input style="width: 390px;" id="shortener" placeholder="URL : " type="text" name="shortener" maxlength="100">
+        </div>
+        <div class="wresult">
+        {% if shortener.shortener != "Error" %}
+            <p><u><b>Result </u>: </b><a target="_blank" href={{ shortener.shortener }}>Short link</a></p>
+        {% else %}
+            <p><u><b>Result : </b></u>Bad URL</p>
+        {% endif %}
+        </div>
+            <input class="main-button" type="submit" value="ShortURL">
+        </form>
+    </div>
+{% endblock content %}

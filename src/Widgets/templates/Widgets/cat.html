@@ -1,0 +1,14 @@
+{% load static %}
+{% block content %}
+<div class="dehash__container">
+    <h1 class="wtitle">Cat Simutator</h1>
+    {% if not "Error !" in cat.cat %}
+        <img src={{ cat.cat }} />
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="cat" id="cat">
+        <input class="main-button" type="submit" value="Generate">
+    </form>
+</div>
+{% endblock content %}

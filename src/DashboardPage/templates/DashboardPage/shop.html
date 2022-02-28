@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'DashboardPage/css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'DashboardPage/css/shop.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Shop</title>
+</head>
+<body>
+    <header>
+        {% include 'DashboardPage/navbar.html' %}
+    </header>
+    <div class="shop_header_title">
+        <h1>Shop</h1>
+    </div>
+    <div class="shop__container">
+        {% for widget in widgets %}
+        <div class="shop__element">
+            <h2 class="shop__title">{{ widget.name|upper }}</h2></br></br>
+            <div class="shop__img">
+                <img class="shop__img_size" src={{ widget.img }}>
+                <div class="shop__bundle">
+                    <h3 class="shop__cat">{{ widget.catID.name }}</h3><br/>
+                    <p class="shop__description">{{ widget.description }}</p>
+                    <!-- <h2>{{ widget.rate }} / 5 stars</h2> -->
+                    <div class="shop_button">
+                        {% for winstall in winstalled %}
+                        {% if winstall.name == widget.name %}
+                        <a href="/dashboard/shop/uninstall/{{ widget.id }}/">Uninstall</a>
+                        {% endif %}
+                        {% endfor %}
+                        <a href="/dashboard/shop/install/{{ widget.id }}/">Install</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div></br></br>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% block content %}
+<div class="dehash__container">
+    <div class="block_up">
+        <h1 class="wtitle">Lyrics</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input style="width: 390px;" placeholder="Author :" id="author" type="text" name="author" maxlength="30" required></br></br>
+            <input style="width: 390px;" placeholder="Song :" id="song" type="text" name="song" maxlength="30" required>
+        </div>
+        <div class="wresult">
+            <p><u><b>Result :</b></u> {{ lyrics.lyrics }}</p>
+        </div>  
+            <input class="main-button" type="submit" value="Search">
+        </form>
+</div>
+{% endblock content %}

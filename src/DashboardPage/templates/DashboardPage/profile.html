@@ -1,0 +1,69 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'DashboardPage/css/profile.css' %}">
+    <title>Profile</title>
+</head>
+<body>
+    <header>
+        {% include 'DashboardPage/navbar.html' %}
+    </header>
+    <div class="body-title-container">
+        <h1>Profile</h1>
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="body-container">
+            <div class="left-container">
+                <div class="photo-container">
+                    <input class="input" id="image" type="file" name="profile_photo" placeholder="Photo" capture>
+                </div>
+                <div class="email-container">
+                    <label for="username">Username</label><br/><br/>
+                    {% render_field form.username class="input" %}
+                </div>
+                <div class="name-container">
+                    <div class="lastname-container">
+                        <label for="lastname">Lastname</label><br/><br/>
+                        {% render_field form.lastname class="input" %}                        
+                    </div>
+                    <div class="firstname-container">
+                        <label for="firstname">Firstname</label><br/><br/>
+                        {% render_field form.firstname class="input" %}
+                    </div>
+                </div>
+                <div class="email-container">
+                    <label for="email">Email</label><br/><br/>
+                    {% render_field form.email class="input" %}
+                </div>
+                <div class="phone-container">
+                    <label for="phone">Phone number</label><br/><br/>
+                    {% render_field form.phone class="input" %}
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="info-address-container">
+                    <div class="address-container">
+                        <label for="address">Address</label><br/><br/>
+                        {% render_field form.address class="input" %}
+                    </div>
+                    <div class="city-container">
+                        <label for="city">City</label><br/><br/>
+                        {% render_field form.city class="input" %}
+                    </div>
+                    <div class="country-container">
+                        <label for="country">Country</label><br/><br/>
+                        {% render_field form.country class="input" %}
+                    </div>
+                </div>
+                <input class="main-button" type="submit" value="Save" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>

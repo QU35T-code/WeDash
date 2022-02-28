@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #EBEDFB;
+}
+
+.body-title-container {
+    width: 15%;
+    border: 3px solid;
+    border-radius: 10px;
+    border-color: #1934AE;
+    background-color: #1934AE;
+    margin-top: 70px;
+    margin-left: 70%;
+    padding: 2%;
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.body-container {
+    display:flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: 125px;
+
+}
+
+.main-button {
+    background-color: #1934AE;
+    width: 100%;
+    color: #FFFFFF;
+    font-family: 'Mada', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 20%;
+    padding: 20px;
+    border: solid 1px;
+    border-color: #1934AE;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.left-container {
+    display:flex;
+    flex-direction: column;
+    align-items: justify;
+    justify-content: center;
+    width: 50%;
+    padding: 25px;
+    border: 3px solid;
+    border-radius: 10px;
+    border-color: #1934AE;
+    background-color: #FFFFFF;
+    margin-right: 5%;
+}
+
+.right-container {
+    width: 40%;
+}
+.info-address-container {
+    display:flex;
+    flex-direction: column;
+    align-items: justify;
+    justify-content: center;
+    padding: 25px;
+    border: 3px solid;
+    border-radius: 10px;
+    border-color: #1934AE;
+    background-color: #FFFFFF;
+}
+
+.name-container {
+    width: 100%;
+    display: flex;
+}
+
+.input {
+    margin-bottom: 5%;
+    padding: 5px;
+    border: 3px solid;
+    border-radius: 10px;
+    width: 80%;
+    height: 25px;
+    border: 3px solid;
+    border-color: #47A4DB;
+}
+
+label {
+    font-family: 'Mada', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #1934AE;
+    text-decoration: none;
+}
+
+.save-button {
+    background-color: #1934AE;
+    margin-top: 20%;
+    padding: 20px;
+    border: solid 1px;
+    border-color: #1934AE;
+    border-radius: 15px;
+    text-align: center;
+}
+
+a {
+    font-family: 'Mada', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+input#name {
+    margin-right: 200px;
+    margin-bottom: 40px;
+    width: 90%;
+}

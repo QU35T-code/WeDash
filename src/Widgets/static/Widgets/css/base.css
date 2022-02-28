@@ -1,0 +1,33 @@
+.main-button {
+    background-color: #1934AE;
+    width: 200px;
+    height: 57px;
+    border-radius: 10px;
+    color: #F9F9FB;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    border-color: #1934AE;
+}
+
+.wtitle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    border: 2px solid;
+    border-color: #47A4DB;
+    border-radius: 10px;
+    padding: 5px;
+    color: #47A4DB;
+}

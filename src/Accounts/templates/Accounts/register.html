@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/auth.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Register</title>
+</head>
+<body>
+    <div class="main-second-container">
+        <div>
+            <h1 class="main-title">Be part of our project and </br>improve your organization.</h1>
+            <img src="{% static 'img/register.png' %}">
+        </div>
+    </div>
+    <div class="main-container">
+    {% if register_form.errors %}
+        {% for field in register_form %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for error in register_form.non_field_errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+        <div style="height: 25%;" class="main-info-form">
+            <h1>Get started</h1>
+            <p style="margin-top: 20px;" class="main-normal-text">Already have an account ? <a href="/accounts/login"><span>Sign In</span></a></p>
+        </div>
+        <div class="main-form-inputs">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="main-inputs-block">
+                    <label class="main-normal-text" for="fname">Username</label>
+                    {{ register_form.username }}
+                </div>
+                <div class="main-inputs-block">
+                    <label class="main-normal-text" for="fname">Email</label>
+                    {{ register_form.email }}
+                </div>
+                <div class="main-inputs-block">
+                    <label class="main-normal-text" for="lname">Password</label>
+                    {{ register_form.password1 }}
+                </div>
+                <div class="main-inputs-block">
+                    <label class="main-normal-text" for="lname">Password Confirmation</label>
+                    {{ register_form.password2 }}
+                </div>
+                <div class="main-submit">
+                    <input style="margin-top: 0px;" class="main-button" type="submit" value="Sign up">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

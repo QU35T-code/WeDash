@@ -1,0 +1,28 @@
+{% block content %}
+{% load widget_tweaks %}
+<div class="dehash__container" style="overflow-x:unset;">
+    <div class="block_up">
+        <h1 class="wtitle">News</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div style="display: flex; flex-direction: row;">
+                <input style="width: 180px; margin-right: 39px;" placeholder="Keyword : " id="keyword_choice" type="text" name="keyword_choice" maxlength="100">
+                {% render_field news.form.lang_choice class="body-form-subject-custom" %}
+            </div>
+            </div>
+            <div class="wresult">
+                {% for n in news.all_articles %}
+                    <p><u><b>Date :</b></u> {{n.publishedAt}}</p>
+                    </br>
+                    <p><u><b>Title :</b></u> {{n.title}}</p>
+                    </br>
+                    <p><u><b>Description :</b></u> {{n.description}}</p>
+                    </br>
+                    <p>------------------------------------------------------</p>
+                    </br>
+                {% endfor %}
+            </div>
+            <input class="main-button" type="submit" value="Search">
+        </form>
+</div>
+{% endblock content %}
